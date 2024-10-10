@@ -1,0 +1,62 @@
++------------------+
+|     Usuario      |
++------------------+
+| - id: str        |
+| - nombre: str    |
+| - email: str     |
+| - edad: int      |
+| - sexo: str      |
++------------------+
+| + __init__(...)  |
+| + __str__()      |
++------------------+
+
++------------------+
+|      Pregunta    |
++------------------+
+| - texto: str     |
++------------------+
+| + __init__(...)  |
++------------------+
+
++------------------+
+|       Respuesta  |
++------------------+
+| - pregunta: Pregunta |
+| - usuario: Usuario |
+| - valor: str      |
++------------------+
+| + __init__(...)   |
++------------------+
+
++------------------+
+|       Grupo      |
++------------------+
+| - nombre: str    |
+| - criterios: dict|
++------------------+
+| + __init__(...)  |
++------------------+
+
++------------------+
+|      Encuesta    |
++------------------+
+| - titulo: str    |
+| - fechaCreacion: str |
+| - preguntas: List<Pregunta> |
+| - grupo: Grupo    |
++------------------+
+| + __init__(...)  |
+| + agregar_pregunta(pregunta: Pregunta) |
+| + aplicar_a_grupo(grupo: Grupo) |
++------------------+
+
++------------------+
+|       app        |
++------------------+
+|                  |
++------------------+
+| + cargar_usuarios_de_csv(archivo_csv) |
+| + realizar_encuesta(usuario: Usuario)  |
+| + main()        |
++------------------+
